@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=QRWiz
+Comment=A program for quickly encoding useful data to QR codes
+Path=/usr/bin
+Exec=qrwiz
+Terminal=false
+Icon=qrwiz
+Categories=Office
