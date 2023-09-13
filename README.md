@@ -1,3 +1,3 @@
 # QRWiz
 
-A GUI application for quicly encoding useful information into QR codes
+A GUI application for quickly encoding useful information into QR codes
