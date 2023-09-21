@@ -18,11 +18,11 @@ func Icon() *fyne.StaticResource {
 	return fyne.NewStaticResource("icon", i)
 }
 
-func ExampleQRCode() *fyne.StaticResource {
-	i, err := assets.ReadFile("res/qr.png")
+func ListOfCountries() *fyne.StaticResource {
+	l, err := assets.ReadFile("res/countries.json")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	return fyne.NewStaticResource("qr", i)
+	return fyne.NewStaticResource("countries", l)
 }
