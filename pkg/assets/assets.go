@@ -26,3 +26,12 @@ func ListOfCountries() *fyne.StaticResource {
 
 	return fyne.NewStaticResource("countries", l)
 }
+
+func Font(style string) *fyne.StaticResource {
+	f, err := assets.ReadFile("res/font-" + style + ".ttf")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return fyne.NewStaticResource("font", f)
+}
