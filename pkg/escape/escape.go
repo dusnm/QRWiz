@@ -2,7 +2,7 @@ package escape
 
 import (
 	"encoding/hex"
-	"fmt"
+	"strings"
 )
 
 func HexString(input string) string {
@@ -10,28 +10,31 @@ func HexString(input string) string {
 		return input
 	}
 
-	if _, err := hex.DecodeString(input); err == nil {
-		// The string can be interpreted as a hex number
-		// therefore we wrap it in double quotes
-		input = fmt.Sprintf("\"%s\"", input)
+	if _, err := hex.DecodeString(input); err != nil {
+		return input
 	}
 
-	return input
+	// The string can be interpreted as a hex number
+	// therefore we wrap it in double quotes
+	builder := strings.Builder{}
+	builder.WriteRune('"')
+	builder.WriteString(input)
+	builder.WriteRune('"')
+
+	return builder.String()
 }
 
 func SpecialCharacters(input string) string {
-	runes := make([]rune, 0, len(input))
+	builder := strings.Builder{}
 	for _, c := range input {
-		if c == '\\' ||
-			c == ';' ||
-			c == ',' ||
-			c == '"' ||
-			c == ':' {
-			runes = append(runes, '\\')
+		switch c {
+		case '\\', ';', '"', ':':
+			builder.WriteRune('\\')
+			fallthrough
+		default:
+			builder.WriteRune(c)
 		}
-
-		runes = append(runes, c)
 	}
 
-	return string(runes)
+	return builder.String()
 }
