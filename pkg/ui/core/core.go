@@ -11,8 +11,10 @@ const (
 	title = "QRWiz"
 )
 
-var App fyne.App
-var Window fyne.Window
+var (
+	App    fyne.App
+	Window fyne.Window
+)
 
 func SetupApp() {
 	App = app.New()

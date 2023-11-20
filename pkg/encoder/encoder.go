@@ -2,9 +2,10 @@ package encoder
 
 import (
 	"bytes"
+	"io"
+
 	"github.com/yeqown/go-qrcode/v2"
 	"github.com/yeqown/go-qrcode/writer/standard"
-	"io"
 )
 
 type (

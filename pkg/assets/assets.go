@@ -2,8 +2,9 @@ package assets
 
 import (
 	"embed"
-	"fyne.io/fyne/v2"
 	"log"
+
+	"fyne.io/fyne/v2"
 )
 
 //go:embed res/*

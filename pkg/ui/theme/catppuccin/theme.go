@@ -1,10 +1,11 @@
 package catppuccin
 
 import (
-	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/theme"
 	"image/color"
 	"sync"
+
+	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/theme"
 )
 
 var _ fyne.Theme = &Catppuccin{}

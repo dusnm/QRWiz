@@ -2,8 +2,9 @@ package wifi
 
 import (
 	"fmt"
-	"github.com/dusnm/QRWiz/pkg/escape"
 	"strconv"
+
+	"github.com/dusnm/QRWiz/pkg/escape"
 )
 
 const (

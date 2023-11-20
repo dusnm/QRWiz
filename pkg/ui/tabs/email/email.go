@@ -5,11 +5,10 @@ import (
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
+	dataEmail "github.com/dusnm/QRWiz/pkg/data/email"
 	"github.com/dusnm/QRWiz/pkg/encoder"
 	"github.com/dusnm/QRWiz/pkg/ui/components/qr"
 	"github.com/dusnm/QRWiz/pkg/ui/core"
-
-	dataEmail "github.com/dusnm/QRWiz/pkg/data/email"
 )
 
 const (
@@ -33,7 +32,6 @@ func Setup() *container.TabItem {
 				subject.Text,
 				body.Text,
 			)
-
 			if err != nil {
 				dialog.NewError(err, core.Window).Show()
 				return

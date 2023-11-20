@@ -3,11 +3,12 @@ package contact
 import (
 	"errors"
 	"fmt"
-	"github.com/dusnm/QRWiz/pkg/escape"
-	"github.com/nyaruka/phonenumbers"
 	"net/mail"
 	"net/url"
 	"strconv"
+
+	"github.com/dusnm/QRWiz/pkg/escape"
+	"github.com/nyaruka/phonenumbers"
 )
 
 type (

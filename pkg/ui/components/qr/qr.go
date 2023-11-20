@@ -2,6 +2,8 @@ package qr
 
 import (
 	"bytes"
+	"image/png"
+
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
@@ -10,7 +12,6 @@ import (
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 	"github.com/dusnm/QRWiz/pkg/ui/core"
-	"image/png"
 )
 
 func Show(data []byte) {

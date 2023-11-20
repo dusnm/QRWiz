@@ -1,0 +1,12 @@
+version: '3'
+tasks:
+  build:
+    cmds:
+      - go build -o ./bin/qrwiz .
+  fmt:
+    cmds:
+      - gofumpt -l -w .
+      - gci write --skip-generated --skip-vendor -s standard -s default .
+  test:
+    cmds:
+      - go test -race ./...

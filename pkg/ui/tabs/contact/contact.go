@@ -2,6 +2,8 @@ package contact
 
 import (
 	"errors"
+	"slices"
+
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/layout"
@@ -11,15 +13,16 @@ import (
 	"github.com/dusnm/QRWiz/pkg/encoder"
 	"github.com/dusnm/QRWiz/pkg/ui/components/qr"
 	"github.com/dusnm/QRWiz/pkg/ui/core"
-	"slices"
 )
 
 const (
 	title = "Contact"
 )
 
-var selectedCountryCodeAlpha2 string
-var selectedCountryCodeAlpha3 string
+var (
+	selectedCountryCodeAlpha2 string
+	selectedCountryCodeAlpha3 string
+)
 
 func Setup() *container.TabItem {
 	name := widget.NewEntry()
@@ -53,7 +56,6 @@ func Setup() *container.TabItem {
 				email.Text,
 				website.Text,
 			)
-
 			if err != nil {
 				dialog.NewError(err, core.Window).Show()
 				return
